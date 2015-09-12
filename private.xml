@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!-- addtional items for Karabiner -->
+<root>
+  <include path="./modules/Launcher.xml" />
+  <item>
+    <name>ESC Eisuu with SimultaneousKeyPresses</name>
+    <identifier>global.esc_eisuu_simultaneouskeypresses</identifier>
+    <appendix>(to ESC + EISUU)</appendix>
+    <appendix>(Simul J + K)</appendix>
+    <appendix>(Simul X + Z)</appendix>
+    <appendix>(Simul J + F)</appendix>
+    <appendix>(SPACE with FN)</appendix>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::J, KeyCode::K,
+      KeyCode::ESCAPE, KeyCode::JIS_EISUU,
+      Option::SIMULTANEOUSKEYPRESSES_RAW
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::X, KeyCode::Z,
+      KeyCode::ESCAPE, KeyCode::JIS_EISUU,
+      Option::SIMULTANEOUSKEYPRESSES_RAW
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::J, KeyCode::F,
+      KeyCode::ESCAPE, KeyCode::JIS_EISUU,
+      Option::SIMULTANEOUSKEYPRESSES_RAW
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::SPACE, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::ESCAPE, KeyCode::JIS_EISUU,
+    </autogen>
+  </item>
+  <item hidden="true">
+    <identifier vk_config="true">notsave_custom_vi_mode</identifier>
+    <autogen>
+      __BlockUntilKeyUp__ KeyCode::S
+    </autogen>
+    <autogen>--KeyToKey-- KeyCode::H, KeyCode::CURSOR_LEFT</autogen>
+    <autogen>--KeyToKey-- KeyCode::J, KeyCode::CURSOR_DOWN</autogen>
+    <autogen>--KeyToKey-- KeyCode::K, KeyCode::CURSOR_UP</autogen>
+    <autogen>--KeyToKey-- KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+    <autogen>--KeyToKey-- KeyCode::F, KeyCode::FN</autogen>
+  </item>
+  <item>
+    <name>Custom Vi mode</name>
+    <item>
+      <name>ModKey: S</name>
+      <identifier>remap.custom_vi_mode_with_s</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::S, ModifierFlag::NONE,
+        @begin
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode,
+        @end
+        @begin
+        KeyCode::S
+        @end
+      </autogen>
+    </item>
+    <item>
+      <name>ModKey: A</name>
+      <identifier>remap.custom_vi_mode_with_a</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::A, ModifierFlag::NONE,
+        @begin
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode, <!-- ModifierFlag::COMMAND_L, -->
+        @end
+        @begin
+        KeyCode::A,
+        @end
+      </autogen>
+    </item>
+  </item>
+  <windownamedef>
+    <name>WorkFlowy</name>
+    <regex>.*( \- )?WorkFlowy( \- )?.*</regex>
+  </windownamedef>
+  <appdef>
+    <appname>WorkFlowy_Fluid</appname>
+    <equal>com.fluidapp.FluidApp.WorkFlowy_Fluid</equal>
+  </appdef>
+  <item>
+    <name>WorkFlowy</name>
+    <identifier>private.app_workflowy</identifier>
+    <windowname_only>WorkFlowy</windowname_only>
+    <only>WorkFlowy_Fluid,GOOGLE_CHROME,SAFARI</only>
+    <appendix>( Work with Fluid,Chrome,Safari )</appendix>
+    <appendix>(CMD+K to delete line)</appendix>
+    <appendix>(CTRL+SHIFT+HJKL to move line)</appendix>
+    <autogen>
+      --KeyToKey--
+      KeyCode::L, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, ModifierFlag::CONTROL_L, | ModifierFlag::NONE,
+      KeyCode::TAB,
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::J, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, ModifierFlag::CONTROL_L, | ModifierFlag::NONE,
+      KeyCode::CURSOR_DOWN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, ModifierFlag::CONTROL_L,
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::K, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, ModifierFlag::CONTROL_L, | ModifierFlag::NONE,
+      KeyCode::CURSOR_UP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, ModifierFlag::CONTROL_L,
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::K, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, | ModifierFlag::NONE,
+      KeyCode::DELETE, VK_COMMAND, VK_SHIFT,
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, ModifierFlag::CONTROL_L, | ModifierFlag::NONE,
+      KeyCode::TAB, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+    </autogen>
+    <!-- general key remapping -->
+  </item>
+  <item>
+    <name>kill combination</name>
+    <identifier>private.global.kill_combinations</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::JIS_COLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | ModifierFlag::NONE,
+      KeyCode::VK_NONE,
+    </autogen>
+  </item>
+  <item>
+    <name>Double down mod key to TextExpander</name>
+    <identifier>private.global.doubledown_textexpander</identifier>
+    <appendix>ExpandKey: \(VK_JIS_BACKSLASH)</appendix>
+    <appendix>Double L/R SHIFT</appendix>
+    <appendix>Simul: KANA + SPACE</appendix>
+    <autogen>
+      __DoublePressModifier__
+      KeyCode::SHIFT_L, KeyCode::SHIFT_L,
+      KeyCode::VK_JIS_BACKSLASH,
+    </autogen>
+    <autogen>
+      __DoublePressModifier__
+      KeyCode::SHIFT_R, KeyCode::SHIFT_R,
+      KeyCode::VK_JIS_BACKSLASH,
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::SPACE, KeyCode::JIS_KANA,
+      KeyCode::VK_JIS_BACKSLASH,
+    </autogen>
+  </item>
+</root>
+

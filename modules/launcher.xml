@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Launcher</name>
+    <identifier>karabiner_launcher</identifier>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.chrome</name>
+      <url type="shell">
+        <![CDATA[ osascript ~/bin/osascript/toggleapp.scpt "Google Chrome" ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.nvALT</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt nvALT ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.Textwell</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt Textwell ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.WorkFlowy_Fluid</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt WorkFlowy_Fluid ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.WorkFlowy</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt WorkFlowy ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.TaskPaper</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt TaskPaper ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.Ulysses</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt Ulysses ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.Safari</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt Chrome ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.ScriptEditor</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt "Script Editor" ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.MacVim</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt MacVim ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.Kobito</name>
+      <url type="shell">
+        <![CDATA[ osascript /Users/catfist/bin/osascript/toggleapp.scpt Kobito ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.Finder</name>
+      <url type="shell">
+        <![CDATA[ osascript ~/bin/osascript/toggleapp.scpt Finder ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.toggle.System_Preferences</name>
+      <url type="shell">
+        <![CDATA[ osascript ~/bin/osascript/toggleapp.scpt "System Preferences" ]]>
+      </url>
+    </vkopenurldef>
+    <vkopenurldef>
+      <name>KeyCode::VK_OPEN_URL_SHELL.todotxt</name>
+      <url type="shell">
+        <![CDATA[ osascript ~/bin/osascript/togglefile.scpt TaskPaper /Users/catfist/Dropbox/todo/todo.txt ]]>
+      </url>
+    </vkopenurldef>
+    <autogen>
+      <!-- finder -->
+      __SimultaneousKeyPresses__
+      KeyCode::F, KeyCode::D,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.Finder,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      <!-- System Preferences -->
+      __SimultaneousKeyPresses__
+      KeyCode::S, KeyCode::P,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.System_Preferences,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      <!-- todo.txt -->
+      __SimultaneousKeyPresses__
+      KeyCode::T, KeyCode::X,
+      KeyCode::VK_OPEN_URL_SHELL.todotxt,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::K, KeyCode::B,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.Kobito,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::M, KeyCode::V,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.MacVim,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::S, KeyCode::E,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.ScriptEditor,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::S, KeyCode::F,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.Safari,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::U, KeyCode::L,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.Ulysses,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::T, KeyCode::P,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.TaskPaper,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::W, KeyCode::F,
+      <!-- KeyCode::VK_OPEN_URL_SHELL.toggle.WorkFlowy_Fluid, -->
+      KeyCode::VK_OPEN_URL_SHELL.toggle.WorkFlowy,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::T, KeyCode::W,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.Textwell,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::N, KeyCode::V,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.nvALT,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+    <autogen>
+      __SimultaneousKeyPresses__
+      KeyCode::C, KeyCode::M,
+      KeyCode::VK_OPEN_URL_SHELL.toggle.chrome,
+      Option::SIMULTANEOUSKEYPRESSES_STRICT_KEY_ORDER
+    </autogen>
+  </item>
+</root>
